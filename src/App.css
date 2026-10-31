@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.anne-drank-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  padding: 28px;
+
+  color: #f8f2e6;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(151, 235, 96, 0.95) 0%,
+      rgba(91, 190, 78, 0.92) 40%,
+      rgba(47, 145, 65, 1) 100%
+    );
+}
+
+.anne-drank-hero {
+  width: min(1100px, 100%);
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.anne-drank-label {
+  margin-bottom: 10px;
+
+  color: #f8f2e6;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.anne-drank-hero h1 {
+  margin: 0;
+
+  color: #ffc83d;
+
+  font-size: clamp(4.5rem, 9vw, 7.5rem);
+  font-weight: 900;
+
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+
+  text-shadow:
+    0 5px 0 #236d3c,
+    0 9px 0 #174f2d,
+    0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.anne-drank-subtitle {
+  margin: 18px 0 24px;
+
+  color: rgba(248, 242, 230, 0.95);
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.anne-drank-video {
+  width: min(850px, 90vw);
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border: 6px solid #f8f2e6;
+  border-radius: 22px;
+
+  background: #101010;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.32);
+}
+
+.anne-drank-video iframe,
+.anne-drank-video video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  object-fit: cover;
+}
+
+.anne-drank-video-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  color: #f8f2e6;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(89, 179, 98, 0.3),
+      transparent 50%
+    ),
+    #101010;
+}
+
+.anne-drank-play {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 6px;
+
+  border-radius: 50%;
+
+  color: #101010;
+  background: #ffc83d;
+
+  font-size: 2rem;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+.anne-drank-video-placeholder strong {
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .anne-drank-page {
+    padding: 18px 12px;
+  }
+
+  .anne-drank-hero h1 {
+    font-size: clamp(3.6rem, 17vw, 5rem);
+  }
+
+  .anne-drank-label {
+    font-size: 0.65rem;
+  }
+
+  .anne-drank-subtitle {
+    margin: 14px 0 20px;
+    font-size: 0.9rem;
+  }
+
+  .anne-drank-video {
+    width: 100%;
+
+    border-width: 4px;
+    border-radius: 16px;
+  }
+
+  .anne-drank-play {
+    width: 65px;
+    height: 65px;
+
+    font-size: 1.5rem;
+  }
+}
